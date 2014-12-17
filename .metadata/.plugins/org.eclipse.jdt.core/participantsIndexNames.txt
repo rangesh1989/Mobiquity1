@@ -1,3 +1,0 @@
-INDEX VERSION 1.127
-C:\Users\Asus\sportsstop\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3940133193.index
-\test\src
