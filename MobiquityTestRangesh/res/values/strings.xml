@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MobiquityTestRangesh</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="login">LOG IN</string>
+    <string name="logout">LOG OUT</string>
+    <string name="upload">UPLOAD</string>
+    <string name="upload_to_dropbox">UPLOAD TO DROPBOX</string>
+    <string name="take_picture">CAPTURE IMAGE</string>
+    <string name="cancel">CANCEL</string>
+     <string name="share_with_fb">SHARE IMAGE</string>
+      <string name="record">RECORD AUDIO</string>
+    <string name="upload_from_gallary"> SELECT FILES TO UPLOAD</string>
+    <string name="logged_in_screen">Congratulations !!!
+         You have successfully logged into Dropbox.
+         This is a test application 
+        for the Mobiquity Code Challenge. 
+        The login allows the user to access the Dropbox API.
+         This Application consists of the functionalities such as image capture,upload captured image to dropbox, display the dropbox files, 
+        upload images and audo files from gallary.
+        </string>
+    <string name="Display">LIST DROPBOX FILES</string>
+    <string name="internet_conn">Please Check the Internet Connection</string>
+   
+    <string name="welcome_message">Welcome to Cloud Storage App powered by dropbox. 
+        	This is a Code Challenge Test App. 
+        	This App can Capture and Upload Images,audio by recording them.
+         	This App can List all the Dropbox files present.   
+         	Please proceed by logging into the app by using the dropbox credentials. 
+         </string>
+    <string name="title_activity_fileexplorer">FileexplorerActivity</string>
+    <string name="upload_activity_text_view">Please choose from the options below to proceed.
+        You can Record Audio Clips, Capture Image and save to native Android App.
+        You can Select Images from the Gallery and upload to Dropbox. 
+        select "Upload To Dropbox" option after making a selection.</string>
+    <string name="title_activity_dropbox_files_display">DropboxFilesDisplayActivity</string>
+
+</resources>
