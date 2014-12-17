@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
+import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -33,6 +34,7 @@ public class FileexplorerActivity extends Activity implements OnClickListener{
 	Button btnTakePicture, btnGallary, btnUpload,btnFb,btnRecord;
 	TextView uploadEntranceView;
 	Intent dropboxIntent;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -59,6 +61,8 @@ public class FileexplorerActivity extends Activity implements OnClickListener{
 		btnUpload.setVisibility(View.GONE);
 		
 		btnFb.setVisibility(View.GONE);
+	
+		
 	}
 	
 	@Override
@@ -198,6 +202,7 @@ Intent sharingIntent = new Intent(Intent.ACTION_SEND);
 	        else if(resultCode == RESULT_CANCELED) 
 	        {
 	        	// User cancelled image capture
+	        	uploadEntranceView.setText(R.string.upload_activity_text_view);
 	        	
 	        	selectedImagePath = "";
 	        }
@@ -232,7 +237,7 @@ Intent sharingIntent = new Intent(Intent.ACTION_SEND);
 			        	// Failed to capture image
 			            
 			        	
-			        	showToast("Failed to capture image");
+			        	showToast("Failed to select Image");
 			            uploadEntranceView.setText(R.string.upload_activity_text_view);
 			        	
 			        	selectedImagePath = "";
@@ -248,6 +253,25 @@ Intent sharingIntent = new Intent(Intent.ACTION_SEND);
 	    			 btnFb.setVisibility(View.VISIBLE);
 		        	 btnUpload.setVisibility(View.VISIBLE);
 	    			}
+	    		  else if(resultCode == RESULT_CANCELED) 
+			        {
+			        	// User cancelled image capture
+			        	
+			        	uploadEntranceView.setText(R.string.upload_activity_text_view);
+			        	
+			        	selectedImagePath = "";
+			        }
+			            
+			        else  
+			        {
+			        	// Failed to capture image
+			            
+			        	
+			        	showToast("Failed to Record Audio");
+			            uploadEntranceView.setText(R.string.upload_activity_text_view);
+			        	
+			        	selectedImagePath = "";
+			        }
 		    }
 	    }
 	
@@ -308,5 +332,4 @@ Intent sharingIntent = new Intent(Intent.ACTION_SEND);
 		    }
 		}
 	
-
 }
