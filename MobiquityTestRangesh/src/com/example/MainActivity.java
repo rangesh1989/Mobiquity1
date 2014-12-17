@@ -129,7 +129,7 @@ public class MainActivity extends Activity implements API_Listener, OnClickListe
 			}
 			else
 			{
-				showToast("Please Check Your Internet Connection.");
+				showToast("Please Login To Dropbox");
 			}
 		}
 			break;
