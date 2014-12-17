@@ -136,6 +136,8 @@ public class MainActivity extends Activity implements API_Listener, OnClickListe
 
 		case R.id.display:
 		{
+		if(isInternetConnected())
+		{
 			if (mLoggedIn){
 				
 				startDropboxFileDisplayActivity();
@@ -144,7 +146,13 @@ public class MainActivity extends Activity implements API_Listener, OnClickListe
 			{
 				showToast("Please Login To Dropbox");
 			}
+			}
+		else
+			{
+			showToast("Please Check Your Internet Connection.");	
+			}	
 		}
+		
 			break;
 			
 		}
